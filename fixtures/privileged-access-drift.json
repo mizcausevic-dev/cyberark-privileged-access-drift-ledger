@@ -1,0 +1,45 @@
+{
+  "asOf": "2026-06-06T10:00:00Z",
+  "estate": "CyberArk-aligned privileged accounts, safes, checkout, rotation, and break-glass review lanes",
+  "lanes": [
+    {
+      "laneId": "domain-admin-safe",
+      "segment": "Windows domain administration",
+      "privilegedAccounts": 42,
+      "vaultedCoveragePercent": 88,
+      "rotationAgeDays": 47,
+      "checkoutPolicyGapCount": 4,
+      "unreviewedBreakGlassAccounts": 3,
+      "staleOwnerCount": 5,
+      "sessionRecordingCoveragePercent": 71,
+      "owner": "Identity security",
+      "nextAction": "Rotate high-impact domain admin accounts and close checkout-policy exceptions before the next access review."
+    },
+    {
+      "laneId": "cloud-root-access",
+      "segment": "Cloud tenant root and break-glass",
+      "privilegedAccounts": 18,
+      "vaultedCoveragePercent": 94,
+      "rotationAgeDays": 20,
+      "checkoutPolicyGapCount": 1,
+      "unreviewedBreakGlassAccounts": 1,
+      "staleOwnerCount": 2,
+      "sessionRecordingCoveragePercent": 88,
+      "owner": "Cloud identity",
+      "nextAction": "Attach break-glass review evidence and bring root-account checkout logging to executive-ready status."
+    },
+    {
+      "laneId": "database-dba-safe",
+      "segment": "Database administration",
+      "privilegedAccounts": 31,
+      "vaultedCoveragePercent": 97,
+      "rotationAgeDays": 12,
+      "checkoutPolicyGapCount": 0,
+      "unreviewedBreakGlassAccounts": 0,
+      "staleOwnerCount": 1,
+      "sessionRecordingCoveragePercent": 93,
+      "owner": "Data platform",
+      "nextAction": "Keep DBA safe evidence attached to the next quarterly privileged access packet."
+    }
+  ]
+}

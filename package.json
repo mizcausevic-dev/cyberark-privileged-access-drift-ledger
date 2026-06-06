@@ -1,0 +1,39 @@
+{
+  "name": "cyberark-privileged-access-drift-ledger",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "CyberArk-aligned privileged access drift ledger for vaulted coverage, rotation age, checkout exposure, and break-glass review.",
+  "scripts": {
+    "lint": "eslint .",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "coverage": "vitest run --coverage",
+    "build": "tsc -p tsconfig.json",
+    "demo": "tsx scripts/run_demo.ts",
+    "powershell:test": "pwsh -NoProfile -ExecutionPolicy Bypass -File powershell/Invoke-DriftLedger.Tests.ps1",
+    "sql:check": "tsx scripts/check_sql.ts",
+    "prerender": "tsx scripts/prerender.ts",
+    "smoke": "tsx scripts/smoke_check.ts",
+    "verify": "npm run lint && npm run typecheck && npm run coverage && npm run build && npm run demo && npm run powershell:test && npm run sql:check && npm run prerender && npm run smoke"
+  },
+  "keywords": [
+    "cyberark",
+    "pam",
+    "privileged-access",
+    "identity",
+    "security",
+    "powershell",
+    "sql"
+  ],
+  "license": "AGPL-3.0-only",
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/node": "^24.10.2",
+    "@vitest/coverage-v8": "^4.1.8",
+    "eslint": "^9.39.1",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.48.1",
+    "vitest": "^4.1.8"
+  }
+}
